@@ -9,6 +9,21 @@ Následně lze celou kampaň spustit, web zobrazí otázku a k ní graf.
 
 Graf se automaticky obnovuje během hlasování.
 
+## Hardware ##
+
+Zařízení bylo postaveno na desce WeMos D1 ESP8266 WiFi Board.
+Nejde tedy o Arduino desku, jen využívá layout Arduina Uno!
+
+### Schéma zapojení ###
+
+![Schéma](Arduino/schema_bb.png?raw=true)
+
+### Seznam součástek ###
+
+ - [seznam součástek](Arduino/schema_bom.html)
+
+Schéma bylo vytvořeno pomocí aplikace Fritzing.
+
 ## Použité zdroje ##
  - [chartjs](https://www.chartjs.org/)
    - Grafy v aplikace
