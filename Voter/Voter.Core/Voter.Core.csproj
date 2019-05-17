@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0065DCD-C43B-4BAC-BEF9-499651555224}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voter.Core</RootNamespace>
+    <AssemblyName>Voter.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.3\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=4.6.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.6.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domains\Services\Common\BaseService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Create\CreateCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Create\CreateCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Create\CreateCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Create\ICreateCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Delete\DeleteCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Delete\DeleteCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Delete\DeleteCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Delete\IDeleteCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\DetailHeader\DetailHeaderCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\DetailHeader\DetailHeaderCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\DetailHeader\DetailHeaderCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\DetailHeader\IDetailHeaderCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Detail\DetailCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Detail\DetailCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Detail\DetailCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Detail\IDetailCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditNext\EditNextCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditNext\EditNextCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditNext\EditNextCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditNext\IEditNextCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditStart\EditStartCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditStart\EditStartCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditStart\EditStartCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\EditStart\IEditStartCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Edit\EditCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Edit\EditCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Edit\EditCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\Edit\IEditCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\ListQuestion\IListQuestionCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\ListQuestion\ListQuestionCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\ListQuestion\ListQuestionCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\ListQuestion\ListQuestionCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\List\IListCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\List\ListCampaignInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\List\ListCampaignOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Campaigns\List\ListCampaignService.cs" />
+    <Compile Include="Domains\Services\Vote\IVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\List\IListVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\List\ListVoteInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\List\ListVoteOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\List\ListVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\ICreateCampaignQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Create\CreateQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Create\CreateQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Create\CreateQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Create\ICreateQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Delete\DeleteQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Delete\DeleteQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Delete\DeleteQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Delete\IDeleteQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Detail\DetailQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Detail\DetailQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Detail\DetailQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Detail\IDetailQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Edit\EditQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Edit\EditQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Edit\EditQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\Edit\IEditQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\List\IListQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\List\ListQuestionInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\List\ListQuestionOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Questions\List\ListQuestionService.cs" />
+    <Compile Include="Domains\Services\Vote\VoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\Create\CreateVoteInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\Create\CreateVoteOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\Create\CreateVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\Create\ICreateVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\ListCampaign\IListCampaignVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\ListCampaign\ListCampaignVoteInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\ListCampaign\ListCampaignVoteOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\ListCampaign\ListCampaignVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\List\IListVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\List\ListVoteInputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\List\ListVoteOutputModel.cs" />
+    <Compile Include="Domains\Services\Vote\Votes\List\ListVoteService.cs" />
+    <Compile Include="Domains\SimpleCoreContainerHelper.cs" />
+    <Compile Include="Infrastructures\Exceptions\AccessDeniedException.cs" />
+    <Compile Include="Infrastructures\Exceptions\VoterException.cs" />
+    <Compile Include="Models\VoteModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Votes\Create\CreateVoteInputModel.cs" />
+    <Compile Include="Services\Votes\Create\CreateVoteOutputModel.cs" />
+    <Compile Include="Services\Votes\Create\CreateVoteService.cs" />
+    <Compile Include="Services\Votes\Create\ICreateVoteService.cs" />
+    <Compile Include="Services\Votes\IVoteService.cs" />
+    <Compile Include="Services\Votes\List\IListVoteService.cs" />
+    <Compile Include="Services\Votes\List\ListVoteInputModel.cs" />
+    <Compile Include="Services\Votes\List\ListVoteOutputModel.cs" />
+    <Compile Include="Services\Votes\List\ListVoteService.cs" />
+    <Compile Include="Services\Votes\VoteService.cs" />
+    <Compile Include="Utils\Logging\LoggerHelper.cs" />
+    <Compile Include="Utils\Results\ModelCoreResult.cs" />
+    <Compile Include="Utils\Validations\ValidateMessage.cs" />
+    <Compile Include="Utils\Validations\Validation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Campaigns\Create\" />
+    <Folder Include="Services\Campaigns\List\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

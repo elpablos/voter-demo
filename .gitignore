@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Voter/.vs
+/Voter/packages
+/Voter/Voter.Core/bin
+/Voter/Voter.Core/obj
+/Voter/Voter.Web/App_Data/Voter.log
+/Voter/Voter.Web/bin
+/Voter/Voter.Web/obj
+/Voter/Voter.Web/Properties/PublishProfiles/FolderProfile.pubxml.user
+/Voter/Voter.Web/Voter.Web.csproj.user
+/Db/Voter.pwgen
