@@ -268,7 +268,7 @@ namespace Voter.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kampaně.
+        ///   Looks up a localized string similar to Ankety.
         /// </summary>
         public static string Vote_Campaigns_Title {
             get {

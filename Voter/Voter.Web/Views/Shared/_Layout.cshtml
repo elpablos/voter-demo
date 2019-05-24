@@ -115,7 +115,7 @@
         <ul class="app-menu">
             <li><a class="app-menu__item" href="@Url.Action("Index", "Campaign")"><i class="app-menu__icon fa fa-home"></i><span class="app-menu__label">Domů</span></a></li>
 
-            <li><a class="app-menu__item" href="@Url.Action("Index", "Campaign")"><i class="app-menu__icon fa fa-money"></i><span class="app-menu__label">Kampaně</span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("Index", "Campaign")"><i class="app-menu__icon fa fa-money"></i><span class="app-menu__label">Ankety</span></a></li>
 
             @*<li><a class="app-menu__item" href="@Url.Action("Index", "Vote")"><i class="app-menu__icon fa fa-envelope"></i><span class="app-menu__label">Test</span></a></li>*@
         </ul>
@@ -136,18 +136,6 @@
                         <legend class="mb-3">Operace</legend>
                         <ul>
                             @foreach (var action in ViewBag.Activities)
-                            {
-                                <li>@action</li>
-                            }
-                        </ul>
-                    </fieldset>
-                }
-                @if (ViewBag.Actions != null)
-                {
-                    <fieldset class="form-group mb-0">
-                        <legend class="mb-3">Seznam akcí</legend>
-                        <ul>
-                            @foreach (var action in ViewBag.Actions)
                             {
                                 <li>@action</li>
                             }
