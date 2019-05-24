@@ -1,0 +1,49 @@
+﻿@model Voter.Web.Controllers.Vote.Votes.List.ListVoteModel
+
+<div class="row">
+    <div class="col-md-12">
+
+        <ul class="nav nav-tabs">
+            @if (Html.HasAction("VT_Question_DETAIL"))
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Detail", "Detail", new { id = Url.RequestContext.RouteData.Values["id"] }, htmlAttributes: new { @class = "nav-link active" })
+                </li>
+            }
+            @if (Html.HasAction("CR_EntityLog_ALL_Question_VT"))
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Historie", "History", new { id = Url.RequestContext.RouteData.Values["id"] }, htmlAttributes: new { @class = "nav-link" })
+                </li>
+            }
+        </ul>
+
+        <div class="tile">
+            <div class="tile-title line-head">
+                <h3>Graf</h3>
+            </div>
+            <div class="tile-body">
+                <div class="row">
+                    <canvas id="myChart" class="max-width: 500px"></canvas>
+                </div>
+            </div>
+
+            <div class="tile-footer">
+            </div>
+        </div>
+
+        <div class="tile">
+            <div class="tile-title line-head">
+                <h3>@ViewBag.Title</h3>
+            </div>
+            <div class="tile-body">
+
+
+                @Html.Partial("_IndexItems", Model.Items)
+            </div>
+
+            <div class="tile-footer">
+            </div>
+        </div>
+    </div>
+</div>

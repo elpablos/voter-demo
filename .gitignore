@@ -12,3 +12,11 @@
 /Voter/Voter.Web/Properties/PublishProfiles/FolderProfile.pubxml.user
 /Voter/Voter.Web/Voter.Web.csproj.user
 /Db/Voter.pwgen
+*.log
+/Voter/Voter.Web03/bin
+/Voter/Voter.Web03/obj/Debug
+*.user
+/Voter/Voter.Web02/bin
+/Voter/Voter.Web02/obj/Debug
+/Voter/Voter.Web01/bin
+/Voter/Voter.Web01/obj/Debug
