@@ -1,7 +1,8 @@
 // ESP8266 blikání dvou LED diod
 
 // nastavení propojovacího pinu LED diody
-#define LEDka 14
+// D4 - cervena dioda
+#define LEDka D4
 
 void setup() {
   // nastavení obou LED diod jako výstupních

@@ -1,4 +1,4 @@
-﻿@model Voter.Web.Controllers.Vote.List.ListVoteModel
+﻿@model Voter.Web.Controllers.Vote.Votes.List.ListVoteModel
 @{
     ViewBag.Title = "Přehled";
 }
@@ -9,7 +9,7 @@
         <p>Všechny podrobnosti o daném záznamu</p>
     </div>
     <ul class="app-breadcrumb breadcrumb">
-        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Campaign")"><i class="fa fa-home fa-lg"></i></a></li>
         <li class="breadcrumb-item">@Html.ActionLink("Přehled", "Index")</li>
         @*<li class="breadcrumb-item"><a href="@Url.Action()">Detail záznamu</a></li>*@
     </ul>

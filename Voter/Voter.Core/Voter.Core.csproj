@@ -94,10 +94,6 @@
     <Compile Include="Domains\Services\Vote\Campaigns\List\ListCampaignOutputModel.cs" />
     <Compile Include="Domains\Services\Vote\Campaigns\List\ListCampaignService.cs" />
     <Compile Include="Domains\Services\Vote\IVoteService.cs" />
-    <Compile Include="Domains\Services\Vote\List\IListVoteService.cs" />
-    <Compile Include="Domains\Services\Vote\List\ListVoteInputModel.cs" />
-    <Compile Include="Domains\Services\Vote\List\ListVoteOutputModel.cs" />
-    <Compile Include="Domains\Services\Vote\List\ListVoteService.cs" />
     <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionInputModel.cs" />
     <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionOutputModel.cs" />
     <Compile Include="Domains\Services\Vote\Questions\CreateCampaign\CreateCampaignQuestionService.cs" />
@@ -140,16 +136,10 @@
     <Compile Include="Infrastructures\Exceptions\VoterException.cs" />
     <Compile Include="Models\VoteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Votes\Create\CreateVoteInputModel.cs" />
-    <Compile Include="Services\Votes\Create\CreateVoteOutputModel.cs" />
-    <Compile Include="Services\Votes\Create\CreateVoteService.cs" />
-    <Compile Include="Services\Votes\Create\ICreateVoteService.cs" />
-    <Compile Include="Services\Votes\IVoteService.cs" />
-    <Compile Include="Services\Votes\List\IListVoteService.cs" />
-    <Compile Include="Services\Votes\List\ListVoteInputModel.cs" />
-    <Compile Include="Services\Votes\List\ListVoteOutputModel.cs" />
-    <Compile Include="Services\Votes\List\ListVoteService.cs" />
-    <Compile Include="Services\Votes\VoteService.cs" />
+    <Compile Include="Domains\Services\Vote\RandomVotes\RandomVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\MemoryVotes\Create\CreateMemoryVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\MemoryVotes\List\ListMemoryVoteService.cs" />
+    <Compile Include="Domains\Services\Vote\MemoryVotes\MemoryVoteService.cs" />
     <Compile Include="Utils\Logging\LoggerHelper.cs" />
     <Compile Include="Utils\Results\ModelCoreResult.cs" />
     <Compile Include="Utils\Validations\ValidateMessage.cs" />
@@ -158,9 +148,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Campaigns\Create\" />
-    <Folder Include="Services\Campaigns\List\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

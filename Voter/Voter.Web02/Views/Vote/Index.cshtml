@@ -1,0 +1,52 @@
+﻿@model Voter.Web.Controllers.Vote.Votes.List.ListVoteModel
+@{
+    ViewBag.Title = "Přehled";
+}
+
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-money"></i> Detail záznamu</h1>
+        <p>Všechny podrobnosti o daném záznamu</p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Campaign")"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="breadcrumb-item">@Html.ActionLink("Přehled", "Index")</li>
+        @*<li class="breadcrumb-item"><a href="@Url.Action()">Detail záznamu</a></li>*@
+    </ul>
+</div>
+
+@*@Html.Action("DetailHeaderPartial", "Campaign", new { ID = Request.QueryString.Get("ID_Campaign") })*@
+
+<div class="row">
+    <div class="col-md-12">
+
+        <ul class="nav nav-tabs">
+            @if (Html.HasAction("VT_Question_DETAIL"))
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Detail", "Detail", new { id = Url.RequestContext.RouteData.Values["id"] }, htmlAttributes: new { @class = "nav-link active" })
+                </li>
+            }
+            @if (Html.HasAction("CR_EntityLog_ALL_Question_VT"))
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Historie", "History", new { id = Url.RequestContext.RouteData.Values["id"] }, htmlAttributes: new { @class = "nav-link" })
+                </li>
+            }
+        </ul>
+
+        <div class="tile">
+            <div class="tile-title line-head">
+                <h3>@ViewBag.Title</h3>
+            </div>
+            <div class="tile-body">
+
+
+                @Html.Partial("_IndexItems", Model.Items)
+            </div>
+
+            <div class="tile-footer">
+            </div>
+        </div>
+    </div>
+</div>

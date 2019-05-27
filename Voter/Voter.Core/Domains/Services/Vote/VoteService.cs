@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Voter.Core.Domains.Services.Vote
+namespace Voter.Core.Domains.Services.Vote.Votes
 {
     public partial class VoteService : IVoteService
     {
